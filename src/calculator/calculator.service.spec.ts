@@ -37,17 +37,17 @@ describe('CalculatorService', () => {
 
   it('should throw error with invalid input', () => {
     expect(() => {
-      service.calculate('1a+2') 
+      service.calculate('1a+2');
     }).toThrow(Error);
 
     expect(() => {
-      service.calculate('') 
+      service.calculate('');
     }).toThrow(Error);
   });
 
   it('should throw error when expression doesnt make sense', () => {
     expect(() => {
-      service.calculate('1*') 
+      service.calculate('1*');
     }).toThrow(Error);
   });
 
@@ -55,11 +55,10 @@ describe('CalculatorService', () => {
     expect(() => {
       service.calculate('1/0');
     }).toThrow(Error);
-    
+
     expect(() => {
       service.calculate('1/(1-1)');
     }).toThrow(Error);
-
   });
 
   it('shoud fail to execute js', () => {
@@ -67,6 +66,7 @@ describe('CalculatorService', () => {
       service.calculate('1+2; (() => {})()');
     }).toThrow(Error);
 
+    // eslint-disable-next-line
     let t = 'foo';
     expect(() => {
       service.calculate('1+2; t = "bar";');
@@ -78,10 +78,7 @@ describe('CalculatorService', () => {
 
     try {
       service.calculate('t = "fizz"');
-    } catch (e) {
-
-    }
+    } catch (e) {}
     expect(t).toBe('foo');
-
   });
 });

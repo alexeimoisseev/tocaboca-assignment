@@ -378,6 +378,13 @@
     "minimatch" "^3.0.4"
     "strip-json-comments" "^3.1.1"
 
+"@hkh12/node-calc@4.2.1":
+  "integrity" "sha512-ZMJtcQem4sltqmvYcNamEfEd24A3wGsEg1OmIEqIMKAn3UdRjCNGck3K3NbKRUkCOpBjrqeCgl7bcnf6gkOYFg=="
+  "resolved" "https://registry.npmjs.org/@hkh12/node-calc/-/node-calc-4.2.1.tgz"
+  "version" "4.2.1"
+  dependencies:
+    "chalk" "^3.0.0"
+
 "@humanwhocodes/config-array@^0.5.0":
   "integrity" "sha512-FagtKFz74XrTl7y6HCzQpwDfXP0yhxe9lHLD1UZxjvZIcbyRz8zTFF/yYNfSfzU414eDwZ1SrO0Qvtyf+wFMQg=="
   "resolved" "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.5.0.tgz"
@@ -1738,6 +1745,14 @@
     "escape-string-regexp" "^1.0.5"
     "supports-color" "^5.3.0"
 
+"chalk@^3.0.0", "chalk@3.0.0":
+  "integrity" "sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg=="
+  "resolved" "https://registry.npmjs.org/chalk/-/chalk-3.0.0.tgz"
+  "version" "3.0.0"
+  dependencies:
+    "ansi-styles" "^4.1.0"
+    "supports-color" "^7.1.0"
+
 "chalk@^4.0.0":
   "integrity" "sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA=="
   "resolved" "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz"
@@ -1750,14 +1765,6 @@
   "integrity" "sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA=="
   "resolved" "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz"
   "version" "4.1.2"
-  dependencies:
-    "ansi-styles" "^4.1.0"
-    "supports-color" "^7.1.0"
-
-"chalk@3.0.0":
-  "integrity" "sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg=="
-  "resolved" "https://registry.npmjs.org/chalk/-/chalk-3.0.0.tgz"
-  "version" "3.0.0"
   dependencies:
     "ansi-styles" "^4.1.0"
     "supports-color" "^7.1.0"

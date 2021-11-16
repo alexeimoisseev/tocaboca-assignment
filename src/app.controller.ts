@@ -1,14 +1,17 @@
-import { Controller, Get, Param } from '@nestjs/common';
-import { AppService } from './app.service';
+import { Controller, Get, Param, HttpException, HttpStatus } from '@nestjs/common';
+import { CalculatorService } from './calculator/calculator.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly calculatorService: CalculatorService) {}
 
-  @Get()
-  calculate(): string {
-    // Get the expression from the path param
-    // Use the calculator service to calculate the answer
-    return 'Not implemented yet'
+  @Get(':expression(*)')
+  calculate(@Param('expression') expression): string {
+    try {
+      const result = this.calculatorService.calculate(expression);
+      return result;      
+    } catch (error) {
+      throw new HttpException(error.message, HttpStatus.BAD_REQUEST);
+    }
   }
 }

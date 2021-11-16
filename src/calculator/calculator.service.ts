@@ -1,9 +1,11 @@
 import { Injectable } from '@nestjs/common';
+import { evalExpression } from '@hkh12/node-calc';
 
 @Injectable()
 export class CalculatorService {
 
     calculate(expression: string): string {
-        return 'Not implemented yet';
+        const result = evalExpression(expression);
+        return String(result);
     }
 }

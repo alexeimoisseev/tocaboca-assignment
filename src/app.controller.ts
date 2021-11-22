@@ -4,10 +4,13 @@ import {
   Param,
   HttpException,
   HttpStatus,
+  UseInterceptors,
 } from '@nestjs/common';
 import { CalculatorService } from './calculator/calculator.service';
+import { HistoryInterceptor } from './history.interceptor';
 
 @Controller()
+@UseInterceptors(HistoryInterceptor)
 export class AppController {
   constructor(private readonly calculatorService: CalculatorService) {}
 
